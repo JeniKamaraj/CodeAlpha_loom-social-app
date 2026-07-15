@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loom — feed</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="topbar" id="topbar"></div>
+
+<div class="shell">
+
+  <div class="composer">
+    <textarea id="composer-input" maxlength="500" placeholder="What's weaving through your mind?"></textarea>
+    <div class="composer-footer">
+      <span class="char-count"><span id="char-count">0</span>/500</span>
+      <button class="btn-post" id="post-btn" disabled>Post</button>
+    </div>
+  </div>
+
+  <div class="feed-tabs">
+    <button id="tab-following" class="active">Following</button>
+    <button id="tab-explore">Explore</button>
+  </div>
+
+  <div id="post-list">
+    <div class="loading-state">loading thread…</div>
+  </div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/posts.js"></script>
+<script src="js/feed.js"></script>
+</body>
+</html>

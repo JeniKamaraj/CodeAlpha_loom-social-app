@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loom — sign in</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="brand"><span class="thread-dot">•</span>Loom</div>
+    <p class="tagline">Threads worth following.</p>
+
+    <div id="error-box"></div>
+
+    <!-- LOGIN FORM -->
+    <form id="login-form">
+      <div class="field">
+        <label for="login-username">username or email</label>
+        <input id="login-username" type="text" autocomplete="username" required />
+      </div>
+      <div class="field">
+        <label for="login-password">password</label>
+        <input id="login-password" type="password" autocomplete="current-password" required />
+      </div>
+      <button class="btn-primary" type="submit">Sign in</button>
+    </form>
+    <p class="auth-switch">New here? <a href="#" id="show-register">Create an account</a></p>
+
+    <!-- REGISTER FORM -->
+    <form id="register-form" style="display:none">
+      <div class="field">
+        <label for="reg-username">username</label>
+        <input id="reg-username" type="text" minlength="3" maxlength="24" required />
+      </div>
+      <div class="field">
+        <label for="reg-displayname">display name</label>
+        <input id="reg-displayname" type="text" maxlength="40" placeholder="optional" />
+      </div>
+      <div class="field">
+        <label for="reg-email">email</label>
+        <input id="reg-email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="reg-password">password</label>
+        <input id="reg-password" type="password" minlength="6" autocomplete="new-password" required />
+      </div>
+      <button class="btn-primary" type="submit">Create account</button>
+    </form>
+    <p class="auth-switch" id="show-login-wrap" style="display:none">Already have an account? <a href="#" id="show-login">Sign in</a></p>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
